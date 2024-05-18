@@ -14,11 +14,11 @@ pipeline {
                 dir('weather-app-backend') {
                     // Building the Docker image
                     script {
-                        sh 'docker build -t weather-backend .'
+                        sh 'docker build -t weather-web-backend .'
                     }
                     // Running the Docker container
                     script {
-                        sh 'docker run -d --name weather-backend -p 5000:5000 weather-backend'
+                        sh 'docker run -d --name weather-web-backend -p 5000:5000 weather-web-backend'
                     }
                 }
             }
